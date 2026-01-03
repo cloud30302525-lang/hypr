@@ -1,0 +1,118 @@
+{
+    // ===== основные параметры =====
+    "position": "bottom",
+    "height": 28,
+    "width": 800,
+    "margin-bottom": 5,
+
+    // ===== расположение модулей =====
+    "modules-left": [
+        "cpu",
+        "memory",
+        "clock",
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "wlr/taskbar"
+    ],
+
+    "modules-right": [
+        "hyprland/language",
+        "pulseaudio",
+        "custom/player-prev",
+        "custom/player",
+        "custom/player-next",
+		"tray"
+    ],
+
+    // ===== workspaces =====
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1"
+    },
+
+    // ===== cpu =====
+    "cpu": {
+        "interval": 10,
+        "format": "    {usage}",
+        "tooltip": true
+    },
+
+    // ===== memory =====
+    "memory": {
+        "interval": 10,
+        "format": "    {used}",
+        "tooltip": false
+    },
+
+    // ===== taskbar =====
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1"
+    },
+
+    // ===== language =====
+    "hyprland/language": {
+        "format-en": "En",
+        "format-ru": "Ru"
+    },
+
+    // ===== volume =====
+    "pulseaudio": {
+        "format": "    {volume}%",
+        "format-muted": "    0%",
+        "scroll-step": 5,
+        "tooltip": false,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+
+    // ===== clock =====
+    "clock": {
+        "format": "   {:%H:%M}",
+        "format-alt": "󰸗   {:%Y-%m-%d}",
+        "tooltip": false
+    },
+
+    // ===== tray =====
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    // ===== player =====
+    "custom/player": {
+        "exec": "playerctl -p firefox status >/dev/null 2>&1 && playerctl -p firefox metadata --format '{\"text\":\"{{ title }}\",\"tooltip\":\"{{ artist }} — {{ title }}\"}' || echo '{\"text\":\"󰎊    music\",\"tooltip\":\"No audio\"}'",
+        "interval": 1,
+        "return-type": "json",
+        "on-click": "playerctl -p firefox play-pause",
+        "on-scroll-up": "playerctl -p firefox position 5+",
+        "on-scroll-down": "playerctl -p firefox position 5-",
+        "max-length": 15
+    },
+
+    // ===== player prev =====
+    "custom/player-prev": {
+        "exec": "echo 󰒮",
+        "on-click": "playerctl -p firefox previous",
+        "tooltip": false
+    },
+
+    // ===== player next =====
+    "custom/player-next": {
+        "exec": "echo 󰒭",
+        "on-click": "playerctl -p firefox next",
+        "tooltip": false
+    }
+}

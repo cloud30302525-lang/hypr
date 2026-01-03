@@ -1,0 +1,149 @@
+*{
+    font-family:JetBrainsMono Nerd;
+    font-weight:bold;
+    font-size:12px;
+    min-height:0;
+}
+
+/* ===== waybar ===== */
+window#waybar{
+    background:transparent;
+    border-radius:10px;
+    padding:2px 4px;
+}
+
+/* ===== базовый стиль всех модулей ===== */
+#workspaces,
+#clock,
+#tray,
+#cpu,
+#memory,
+#language,
+#pulseaudio,
+#custom-player-prev,
+#custom-player,
+#custom-player-next{
+    background:rgba(29,29,32,.3);
+    padding:0px 8px;
+    border:1px solid rgba(56,56,59,.6);
+    color:rgba(255,255,255,.7);
+}
+
+/* ===== одиночные модули ===== */
+#workspaces,
+#clock,
+#tray{
+    margin:0px 6px;
+    border-radius:6px;
+}
+
+/* ===== сгруппированные модули ===== */
+#cpu,
+#memory,
+#language,
+#pulseaudio,
+#custom-player-prev,
+#custom-player,
+#custom-player-next{
+    margin:0px;
+}
+
+/* ===== cpu + memory ===== */
+#cpu{
+    min-width:35px;
+    border-radius:6px 0 0 6px;
+}
+
+#memory{
+    min-width:45px;
+    margin-right:6px;
+    border-left:none;
+    border-radius:0 6px 6px 0;
+}
+
+/* ===== language + volume ===== */
+#language{
+    min-width:18px;
+    margin-left:6px;
+    border-radius:6px 0 0 6px;
+}
+
+#pulseaudio{
+    margin-right:6px;
+    border-left:none;
+    border-radius:0 6px 6px 0;
+}
+
+/* ===== player ===== */
+#custom-player-prev{
+    margin-left:6px;
+    border-radius:6px 0 0 6px;
+}
+
+#custom-player{
+    min-width:110px;
+    border-left:none;
+    border-right:none;
+}
+
+#custom-player-next{
+    margin-right:0px;
+    border-radius:0 6px 6px 0;
+}
+
+/* ===== workspaces ===== */
+
+#workspaces button{
+    background:transparent;
+    padding:0 6px;
+    border-radius:6px;
+    color:rgba(255,255,255,.3);
+}
+
+#workspaces button:not(.empty),
+#workspaces button.active{
+    color:rgba(255,255,255,.7);
+}
+
+#workspaces button.active{
+    border-bottom:1px solid rgba(255,255,255,.7);
+    border-radius:0;
+}
+
+/* ===== taskbar ===== */
+#taskbar{
+    background:transparent;
+    margin:0px 6px;
+    min-width:306px;
+}
+
+#taskbar button{
+    background:transparent;
+    padding:0 6px;
+    border-radius:6px;
+}
+
+#taskbar button.active{
+    background:rgba(29,29,32,.3);
+    border:1px solid rgba(56,56,59,.6);
+}
+
+/* ===== tray ===== */
+#tray{
+    margin-right:0;
+    margin-left:12px;
+}
+
+/* ===== hover ===== */
+#pulseaudio:hover,
+#clock:hover,
+#custom-player-prev:hover,
+#custom-player:hover,
+#custom-player-next:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* ===== icons ===== */
+#taskbar button image{
+    margin:0 2px;
+}

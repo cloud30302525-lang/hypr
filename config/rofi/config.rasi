@@ -1,0 +1,11 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    font: "JetBrainsMono Nerd Font 12";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+@theme "theme"

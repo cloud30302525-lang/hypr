@@ -1,0 +1,71 @@
+* {
+    bg:            rgba(29, 29, 32, 0.9);
+    border:        rgba(56, 56, 59, 0.6);
+    fg:            rgba(255, 255, 255, 1.0);
+    fg-dim:        rgba(255, 255, 255, 0.6);
+    hover:         rgba(255, 255, 255, 0.08);
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 600px;
+    border-radius: 6px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+}
+
+mainbox {
+    padding: 8px;
+}
+
+inputbar {
+    background-color: transparent;
+    padding: 4px 6px;
+    margin: 0 0 6px 0;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder: "search…";
+    placeholder-color: @fg-dim;
+}
+
+listview {
+    lines: 12;
+    spacing: 2px;
+    scrollbar: false;
+}
+
+element {
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @hover;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 25px;
+    margin: 0 6px 0 0;
+}
+
+entry {
+    placeholder: "  Search";
+    horizontal-align: 0.5;
+}

@@ -1,0 +1,14 @@
+[window]
+opacity = 0.1
+padding = { x = 10, y = 0 }
+dynamic_padding = false
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[selection]
+save_to_clipboard = true

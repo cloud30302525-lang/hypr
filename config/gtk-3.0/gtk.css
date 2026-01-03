@@ -1,0 +1,18 @@
+@import 'colors.css';
+
+/* ===== tooltip ===== */
+tooltip,
+tooltip.background {
+    background-color: rgba(29, 29, 32, 0.98);
+    color: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid rgba(56, 56, 59, 0.7);
+    border-radius: 6px;
+
+    padding: 6px 10px;
+}
+
+/* ===== tooltip text ===== */
+tooltip label {
+    color: rgba(255, 255, 255, 0.9);
+}
