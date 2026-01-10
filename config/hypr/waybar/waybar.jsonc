@@ -1,0 +1,78 @@
+{
+  "position":"bottom",
+  "height":30,
+  "width":1000,
+  "margin-bottom":5,
+
+  "modules-left":[
+    "cpu",
+    "memory",
+    "hyprland/workspaces"
+  ],
+  "modules-center":[
+    "wlr/taskbar"
+  ],
+  "modules-right":[
+    "tray",
+    "pulseaudio",
+    "hyprland/language",
+    "clock"
+  ],
+
+  "cpu":{
+    "interval":10,
+    "format":"   {usage}",
+    "tooltip":true
+  },
+
+  "memory":{
+    "interval":10,
+    "format":"   {used}",
+    "tooltip":false
+  },
+
+  "hyprland/workspaces":{
+    "format":"{name}",
+    "persistent-workspaces":{
+      "*":5
+    },
+    "on-scroll-up":"hyprctl dispatch workspace -1",
+    "on-scroll-down":"hyprctl dispatch workspace +1"
+  },
+
+  "wlr/taskbar":{
+    "icon-size":16,
+    "tooltip":true,
+    "tooltip-format":"{title}",
+    "on-click":"activate",
+    "on-click-middle":"close",
+    "on-scroll-up":"hyprctl dispatch workspace e-1",
+    "on-scroll-down":"hyprctl dispatch workspace e+1"
+  },
+
+  "tray":{
+    "icon-size":16,
+    "spacing":10
+  },
+
+  "pulseaudio":{
+    "format":"   {volume}%",
+    "format-muted":"   0%",
+    "scroll-step":5,
+    "tooltip":false,
+    "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle":"pavucontrol"
+  },
+
+  "hyprland/language":{
+    "format-en":"En",
+    "format-ru":"Ru"
+  },
+
+  "clock":{
+    "format":"   {:%H:%M}",
+    "format-alt":"󰸗   {:%Y-%m-%d}",
+    "tooltip":true,
+    "tooltip-format":"<tt>{calendar}</tt>"
+  }
+}

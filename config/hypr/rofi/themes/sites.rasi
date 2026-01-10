@@ -1,0 +1,18 @@
+@import "../config.rasi"
+
+window {
+    width: 250px;
+}
+
+element {
+    padding: 5px 30px;
+}
+
+listview {
+    lines: 8;
+    fixed-height: true;
+}
+
+entry {
+    placeholder: " 󰌹 Sites";
+}

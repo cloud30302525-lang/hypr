@@ -1,0 +1,20 @@
+@import "../config.rasi"
+
+window {
+    width: 320px;
+    padding: 10px;
+}
+
+mainbox {
+    children: [ message, listview ];
+    spacing: 20px;
+}
+
+listview {
+    lines: 1;
+    columns: 3;
+}
+
+element {
+    padding: 8px;
+}

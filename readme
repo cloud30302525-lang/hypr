@@ -1,0 +1,20 @@
+sudo mkdir -p /lib/firmware/edid/
+sudo cp ~/hypr/edid75.bin /lib/firmware/edid/
+sudo nano /etc/default/grub
+drm.edid_firmware=DVI-D-1:edid/edid75.bin
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo nano /etc/polkit-1/rules.d/49-openvpn.rules
+
+polkit.addRule(function(action, subject) {
+    if (
+        subject.user == "xxx" &&
+        action.id == "org.freedesktop.policykit.exec" &&
+        (
+            action.lookup("command_line").indexOf("/usr/bin/openvpn") >= 0 ||
+            action.lookup("command_line").indexOf("killall openvpn") >= 0
+        )
+    ) {
+        return polkit.Result.YES;
+    }
+});

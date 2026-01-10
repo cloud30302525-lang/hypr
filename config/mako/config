@@ -1,0 +1,19 @@
+font=JetBrainsMono Nerd 11
+
+background-color=#1d1d20e6
+text-color=#FFFFFFB3
+border-color=#FFFFFF1A
+progress-color=over  #FFFFFF1A
+
+border-size=1
+border-radius=8
+padding=8
+margin=10
+
+anchor=bottom-right
+layer=overlay
+
+default-timeout=5000
+max-visible=5
+sort=-time
+group-by=app-name

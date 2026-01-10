@@ -1,0 +1,28 @@
+@import "../config.rasi"
+
+* {
+    show-icons: false;
+}
+
+window {
+    width: 700px;
+}
+
+element-icon {
+    size: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+element-text {
+    margin: 0;
+}
+
+entry {
+    placeholder: "  Files";
+    horizontal-align: 0.5;
+}
+
+listview {
+    lines: 15;
+}

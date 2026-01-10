@@ -1,0 +1,30 @@
+@define-color bg rgba(40,40,45,.7);
+@define-color panel rgba(255,255,255,.04);
+@define-color active rgba(255,255,255,.06);
+@define-color text rgba(255,255,255,.8);
+@define-color text-dim rgba(255,255,255,.15);
+@define-color border rgba(255,255,255,.08);
+
+*{font-family:JetBrainsMono Nerd;font-weight:bold;font-size:12px;min-height:0}
+
+window#waybar{background:@bg;border-radius:12px;box-shadow:inset 0 0 0 1px @border}
+
+#cpu,#memory,#pulseaudio,#clock{background:@panel;color:@text}
+
+#cpu{min-width:40px;padding:0 0 0 2px;margin:4px 0 4px 4px;border-radius:10px 0 0 10px}
+#memory{min-width:50px;padding:0 5px 0 0;margin:4px 4px 4px 0;border-radius:0 10px 10px 0}
+
+#workspaces{background:@panel;margin:4px;border-radius:10px}
+#workspaces button{background:transparent;padding:0 8px;border-radius:10px;color:@text-dim}
+#workspaces button:not(.empty),#workspaces button.active{color:@text}
+#workspaces button.active{background:@active}
+
+#tray{padding:0 6px}
+#pulseaudio{padding:0 10px;margin:4px;border-radius:10px;min-width:50px}
+#language{min-width:20px}
+#clock{padding:0 10px;margin:4px;border-radius:10px}
+
+#taskbar button{background:transparent}
+
+tooltip{background:rgba(40,40,45,.9);border-radius:8px;border:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+tooltip label{color:@text}

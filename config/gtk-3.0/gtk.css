@@ -1,0 +1,127 @@
+@import 'colors.css';
+
+/* tooltip */
+tooltip.background{
+    background-color:rgb(29,29,32);
+    color:#fff;
+    font-family:"JetBrainsMono Nerd Font",monospace;
+    font-size:14px;
+    font-weight:700;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:8px;
+}
+
+/* base */
+@define-color theme_base_color #1e1e22;
+@define-color theme_bg_color #1e1e22;
+@define-color theme_text_color #dcdcdc;
+
+/* selection / accent */
+@define-color theme_selected_bg_color #3a3a3f;
+@define-color theme_selected_fg_color #ffffff;
+@define-color theme_selected_base_color #3a3a3f;
+@define-color theme_selected_text_color #ffffff;
+@define-color theme_selected_bg_color_focus #4a4a50;
+@define-color theme_selected_base_color_focus #4a4a50;
+@define-color accent_color #3a3a3f;
+@define-color accent_fg_color #ffffff;
+@define-color accent_bg_color #3a3a3f;
+
+/* window / header / popover / view / card / sidebar */
+@define-color window_bg_color #1e1e22;
+@define-color window_fg_color #dcdcdc;
+@define-color headerbar_bg_color #1e1e22;
+@define-color headerbar_fg_color #dcdcdc;
+@define-color popover_bg_color #1e1e22;
+@define-color popover_fg_color #dcdcdc;
+@define-color view_bg_color #1e1e22;
+@define-color view_fg_color #dcdcdc;
+@define-color card_bg_color #1e1e22;
+@define-color card_fg_color #dcdcdc;
+@define-color sidebar_bg_color #1e1e22;
+@define-color sidebar_fg_color #dcdcdc;
+@define-color sidebar_border_color #1e1e22;
+@define-color sidebar_backdrop_color #1e1e22;
+
+/* text selection */
+selection{background-color:@theme_selected_bg_color;color:@theme_selected_fg_color}
+*:focus selection{background-color:@theme_selected_bg_color_focus}
+
+/* lists / icons */
+iconview:selected,
+flowboxchild:selected,
+.view:selected,
+row:selected{
+    background-color:@theme_selected_base_color;
+    color:@theme_selected_text_color
+}
+iconview:selected:focus,
+flowboxchild:selected:focus,
+.view:selected:focus,
+row:selected:focus{
+    background-color:@theme_selected_base_color_focus
+}
+
+/* menus */
+menuitem:selected{background-color:@theme_selected_bg_color;color:@theme_selected_fg_color}
+menuitem:selected:focus{background-color:@theme_selected_bg_color_focus}
+
+/* buttons */
+button:selected,
+button:selected:checked{
+    background-color:@theme_selected_bg_color;
+    color:@theme_selected_fg_color
+}
+button:selected:focus,
+button:selected:checked:focus{
+    background-color:@theme_selected_bg_color_focus
+}
+
+/* entry text selection */
+.path-bar selection,
+.location-bar selection,
+entry selection{
+    background-color:#505057;
+    color:#fff
+}
+*:focus entry selection{background-color:#5a5a61}
+
+/* infobar */
+infobar{
+    background-color:@theme_base_color;
+    color:@theme_text_color;
+    border:none;
+    box-shadow:none
+}
+infobar box{background-color:transparent}
+infobar label{color:@theme_text_color}
+infobar button{
+    background-color:@theme_selected_bg_color;
+    color:@theme_selected_fg_color;
+    border:none
+}
+infobar button:hover{background-color:shade(@theme_selected_bg_color,1.4)}
+infobar button:focus,
+infobar button:active,
+infobar button:checked{
+    background-color:@theme_selected_bg_color_focus
+}
+
+/* location / search entry */
+entry,
+.thunar entry,
+.thunar-window entry{
+    background-color:@theme_bg_color;
+    color:@theme_text_color;
+    border:none;
+    box-shadow:none
+}
+entry:focus{
+    background-color:@theme_bg_color;
+    color:@theme_text_color
+}
+entry selection{
+    background-color:@theme_selected_bg_color;
+    color:@theme_selected_fg_color
+}
+entry placeholder{color:shade(@theme_text_color,.7)}

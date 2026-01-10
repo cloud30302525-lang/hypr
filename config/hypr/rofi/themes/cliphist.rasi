@@ -1,0 +1,24 @@
+@import "../config.rasi"
+
+* {
+    show-icons: false;
+}
+
+window {
+    width: 600px;
+}
+
+element-icon {
+    size: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+element-text {
+    margin: 0;
+}
+
+entry {
+    placeholder: " 󱉨 Clipboard";
+    horizontal-align: 0.5;
+}
