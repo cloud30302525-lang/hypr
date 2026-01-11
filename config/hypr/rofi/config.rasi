@@ -6,6 +6,7 @@ configuration {
     location: 0;
     disable-history: false;
     sidebar-mode: false;
+    kb-accept-entry: "Return,space";
 }
 
 @theme "theme"
