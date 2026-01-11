@@ -18,3 +18,8 @@ listview {
 element {
     padding: 8px;
 }
+
+configuration {
+	kb-move-char-back: "Left";
+	kb-move-char-forward: "Right";
+}
