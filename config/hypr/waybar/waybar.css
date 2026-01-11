@@ -1,6 +1,5 @@
-@define-color bg rgba(40,40,45,.7);
-@define-color panel rgba(255,255,255,.04);
-@define-color active rgba(255,255,255,.06);
+@define-color bg rgba(40,40,45,0.9);
+@define-color panel rgba(255,255,255,.06);
 @define-color text rgba(255,255,255,.8);
 @define-color text-dim rgba(255,255,255,.15);
 @define-color border rgba(255,255,255,.08);
@@ -17,7 +16,7 @@ window#waybar{background:@bg;border-radius:12px;box-shadow:inset 0 0 0 1px @bord
 #workspaces{background:@panel;margin:4px;border-radius:10px}
 #workspaces button{background:transparent;padding:0 8px;border-radius:10px;color:@text-dim}
 #workspaces button:not(.empty),#workspaces button.active{color:@text}
-#workspaces button.active{background:@active}
+#workspaces button.active{background:@panel}
 
 #tray{padding:0 6px}
 #pulseaudio{padding:0 10px;margin:4px;border-radius:10px;min-width:50px}
