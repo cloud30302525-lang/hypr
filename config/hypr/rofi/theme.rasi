@@ -1,20 +1,18 @@
 * {
-    bg: rgba(40,40,45,0.95);
-    border: rgba(255,255,255,0.1);
-    fg: rgba(200,200,200,0.85);
-    fg-dim: rgba(255,255,255,0.6);
-    hover: rgba(255,255,255,0.08);
+    bg: rgba(40,40,45,0.9);
+    fg: rgba(200,200,200,0.9);
+    hover: rgba(255,255,255,0.1);
 
     background-color: transparent;
     text-color: @fg;
 }
 
 window {
-    width: 450px;
+    width: 400px;
     border-radius: 10px;
     background-color: @bg;
     border: 1px;
-    border-color: @border;
+    border-color: @hover;
 }
 
 mainbox {
@@ -23,7 +21,7 @@ mainbox {
 
 inputbar {
     background-color: transparent;
-    padding: 4px 6px;
+    padding: 0px;
     margin: 0 0 6px 0;
 }
 
@@ -33,7 +31,6 @@ prompt {
 
 entry {
     placeholder: "  Search";
-    placeholder-color: @fg-dim;
     horizontal-align: 0.5;
 }
 
