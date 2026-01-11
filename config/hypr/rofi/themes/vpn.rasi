@@ -5,8 +5,7 @@ configuration {
 }
 
 window {
-    width: 300px;
-    padding: 10px;
+    width: 250px;
 }
 
 mainbox {
