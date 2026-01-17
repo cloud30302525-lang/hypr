@@ -1,0 +1,26 @@
+@import "../config.rasi"
+
+window {
+    width: 320px;
+    padding: 10px;
+	font: "Noto Sans 12";
+}
+
+mainbox {
+    children: [ message, listview ];
+    spacing: 20px;
+}
+
+listview {
+    lines: 1;
+    columns: 3;
+}
+
+element {
+    padding: 8px;
+}
+
+configuration {
+	kb-move-char-back: "Left";
+	kb-move-char-forward: "Right";
+}

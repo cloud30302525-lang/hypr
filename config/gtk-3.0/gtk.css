@@ -1,0 +1,102 @@
+/* Accent */
+@define-color accent_bg_color #3B3A46;
+@define-color accent_fg_color #ffffff;
+
+/* Semantic */
+@define-color destructive_bg_color #E06C75;
+@define-color destructive_fg_color #1E1E24;
+
+@define-color success_bg_color #98C379;
+@define-color success_fg_color #1E1E24;
+
+@define-color warning_bg_color #E5C07B;
+@define-color warning_fg_color #1E1E24;
+
+@define-color error_bg_color #E06C75;
+@define-color error_fg_color #1E1E24;
+
+@define-color accent_color @accent_bg_color;
+@define-color destructive_color #E06C75;
+@define-color success_color #98C379;
+@define-color warning_color #E5C07B;
+@define-color error_color #E06C75;
+
+/* Window */
+@define-color window_bg_color #23222A;
+@define-color window_fg_color rgba(255,255,255,0.92);
+
+@define-color view_bg_color @window_bg_color;
+@define-color view_fg_color rgba(255,255,255,0.92);
+
+/* Headerbar */
+@define-color headerbar_bg_color #2B2A33;
+@define-color headerbar_fg_color rgba(255,255,255,0.92);
+@define-color headerbar_border_color #3B3A46;
+@define-color headerbar_backdrop_color #1D1C23;
+@define-color headerbar_shade_color rgba(0,0,0,0.25);
+@define-color headerbar_darker_shade_color rgba(0,0,0,0.45);
+
+/* Sidebar */
+@define-color sidebar_bg_color #2B2A33;
+@define-color sidebar_fg_color rgba(255,255,255,0.9);
+@define-color sidebar_backdrop_color #1D1C23;
+@define-color sidebar_shade_color rgba(0,0,0,0.25);
+@define-color sidebar_border_color #3B3A46;
+
+/* Cards */
+@define-color card_bg_color #33323D;
+@define-color card_fg_color rgba(255,255,255,0.9);
+@define-color card_shade_color rgba(0,0,0,0.25);
+
+/* Dialogs */
+@define-color dialog_bg_color #23222A;
+@define-color dialog_fg_color rgba(255,255,255,0.92);
+
+/* Popovers / Menus */
+@define-color popover_bg_color #2B2A33;
+@define-color popover_fg_color rgba(255,255,255,0.92);
+@define-color popover_shade_color rgba(0,0,0,0.3);
+
+/* Thumbnails */
+@define-color thumbnail_bg_color #3B3A46;
+@define-color thumbnail_fg_color rgba(255,255,255,0.9);
+
+/* Misc */
+@define-color shade_color rgba(0,0,0,0.25);
+@define-color scrollbar_outline_color #4B4A56;
+
+@define-color panel_bg_color #1D1C23;
+@define-color panel_fg_color rgba(255,255,255,0.9);
+
+/* Tooltip */
+tooltip,
+tooltip.background {
+  background-color: #2B2A33;
+  color: rgba(255,255,255,0.92);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+tooltip label {
+  color: rgba(255,255,255,0.92);
+}
+
+/* Widgets */
+entry {
+  background-color: @window_bg_color;
+  border: none;
+}
+
+infobar box {
+  background-color: @window_bg_color;
+}
+
+selection {
+  background-color: @accent_bg_color;
+}
+
+button:focus {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+}

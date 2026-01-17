@@ -1,0 +1,13 @@
+@import "../config.rasi"
+
+window {
+    width: 200px;
+}
+
+mainbox {
+    children: [ listview ];
+}
+
+listview {
+    lines: 3;
+}

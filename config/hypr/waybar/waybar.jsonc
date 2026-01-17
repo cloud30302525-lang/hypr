@@ -1,0 +1,76 @@
+{
+  "position": "bottom",
+  "height": 30,
+  "width": 850,
+  "margin-bottom": 5,
+  
+  "modules-left": [
+    "custom/weather",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "hyprland/language",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰮯"
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1"
+  },
+
+  "wlr/taskbar": {
+    "icon-size": 16,
+    "tooltip": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+
+  "pulseaudio": {
+    "format": "    {volume}%",
+    "format-muted": "    0%",
+    "scroll-step": 5,
+    "tooltip": false,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol"
+  },
+
+  "hyprland/language": {
+    "format-en": "En",
+    "format-ru": "Ru"
+  },
+
+  "clock": {
+    "format": "   {:L%a %H:%M}",
+    "format-alt": "󰸗   {:%Y-%m-%d}",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/hypr/waybar/weather.sh",
+    "interval": 900,
+    "return-type": "json"
+  }
+}

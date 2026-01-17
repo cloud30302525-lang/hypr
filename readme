@@ -1,0 +1,5 @@
+sudo mkdir -p /lib/firmware/edid/
+sudo cp ~/hypr/edid75.bin /lib/firmware/edid/
+sudo nano /etc/default/grub
+drm.edid_firmware=DVI-D-1:edid/edid75.bin
+sudo grub-mkconfig -o /boot/grub/grub.cfg

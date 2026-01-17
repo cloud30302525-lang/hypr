@@ -1,0 +1,53 @@
+* {
+    bg: rgba(35,34,42,0.9);
+    fg: rgba(200,200,200,0.9);
+    hover: rgb(59,58,70);
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 350px;
+    border-radius: 10px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @hover;
+}
+
+mainbox {
+    padding: 8px;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder: "   Apps";
+    horizontal-align: 0.5;
+}
+
+listview {
+    lines: 10;
+    scrollbar: false;
+}
+
+element {
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+element selected.normal {
+    border: 2px;
+    border-color: @hover;
+}
+
+element-text {
+	font: "Noto Sans 12";
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 6px 0 0;
+}

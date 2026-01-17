@@ -1,0 +1,14 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    font: "Noto Sans 12";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    kb-accept-entry: "Return,space";
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+}
+
+@theme "theme"

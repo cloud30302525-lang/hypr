@@ -1,0 +1,176 @@
+/* Semantic */
+@define-color destructive_bg_color #E06C75;
+@define-color destructive_fg_color #1E1E24;
+
+@define-color success_bg_color #98C379;
+@define-color success_fg_color #1E1E24;
+
+@define-color warning_bg_color #E5C07B;
+@define-color warning_fg_color #1E1E24;
+
+@define-color error_bg_color #E06C75;
+@define-color error_fg_color #1E1E24;
+
+/* Accent */
+@define-color accent_bg_color #3B3A46;
+@define-color accent_fg_color #ffffff;
+
+@define-color accent_color oklab(from @accent_bg_color min(l, 0.5) a b);
+@define-color destructive_color oklab(from @destructive_bg_color min(l, 0.5) a b);
+@define-color success_color oklab(from @success_bg_color min(l, 0.5) a b);
+@define-color warning_color oklab(from @warning_bg_color min(l, 0.5) a b);
+@define-color error_color oklab(from @error_bg_color min(l, 0.5) a b);
+
+/* Window */
+@define-color window_bg_color #23222A;
+@define-color window_fg_color rgba(255,255,255,0.92);
+
+/* View */
+@define-color view_bg_color #1D1C23;
+@define-color view_fg_color rgba(255,255,255,0.92);
+
+/* Headerbar */
+@define-color headerbar_bg_color #2B2A33;
+@define-color headerbar_fg_color rgba(255,255,255,0.92);
+@define-color headerbar_border_color #3B3A46;
+@define-color headerbar_backdrop_color #1D1C23;
+@define-color headerbar_shade_color rgb(0 0 0 / 25%);
+@define-color headerbar_darker_shade_color rgb(0 0 0 / 45%);
+
+/* Sidebar */
+@define-color sidebar_bg_color #2B2A33;
+@define-color sidebar_fg_color rgba(255,255,255,0.9);
+@define-color sidebar_backdrop_color #1D1C23;
+@define-color sidebar_shade_color rgb(0 0 0 / 25%);
+@define-color sidebar_border_color #3B3A46;
+
+/* Secondary sidebar */
+@define-color secondary_sidebar_bg_color #33323D;
+@define-color secondary_sidebar_fg_color rgba(255,255,255,0.9);
+@define-color secondary_sidebar_backdrop_color #1D1C23;
+@define-color secondary_sidebar_shade_color rgb(0 0 0 / 25%);
+@define-color secondary_sidebar_border_color #3B3A46;
+
+/* Cards */
+@define-color card_bg_color #33323D;
+@define-color card_fg_color rgba(255,255,255,0.9);
+@define-color card_shade_color rgb(0 0 0 / 25%);
+
+/* Dialogs */
+@define-color dialog_bg_color #2B2A33;
+@define-color dialog_fg_color rgba(255,255,255,0.92);
+
+/* Popovers */
+@define-color popover_bg_color #2B2A33;
+@define-color popover_fg_color rgba(255,255,255,0.92);
+@define-color popover_shade_color rgb(0 0 0 / 30%);
+
+/* Thumbnails */
+@define-color thumbnail_bg_color #3B3A46;
+@define-color thumbnail_fg_color rgba(255,255,255,0.9);
+
+/* Misc */
+@define-color shade_color rgb(0 0 0 / 25%);
+@define-color scrollbar_outline_color #4B4A56;
+
+/* ================= CSS variables ================= */
+
+:root {
+  --standalone-color-oklab: min(l, 0.5) a b;
+
+  --accent-bg-color: #3B3A46;
+  --accent-fg-color: #ffffff;
+  --accent-color: oklab(from var(--accent-bg-color) var(--standalone-color-oklab));
+
+  --destructive-bg-color: @destructive_bg_color;
+  --destructive-fg-color: @destructive_fg_color;
+  --destructive-color: oklab(from var(--destructive-bg-color) var(--standalone-color-oklab));
+
+  --success-bg-color: @success_bg_color;
+  --success-fg-color: @success_fg_color;
+  --success-color: oklab(from var(--success-bg-color) var(--standalone-color-oklab));
+
+  --warning-bg-color: @warning_bg_color;
+  --warning-fg-color: @warning_fg_color;
+  --warning-color: oklab(from var(--warning-bg-color) var(--standalone-color-oklab));
+
+  --error-bg-color: @error_bg_color;
+  --error-fg-color: @error_fg_color;
+  --error-color: oklab(from var(--error-bg-color) var(--standalone-color-oklab));
+
+  --window-bg-color: @window_bg_color;
+  --window-fg-color: @window_fg_color;
+
+  --view-bg-color: @view_bg_color;
+  --view-fg-color: @view_fg_color;
+
+  --headerbar-bg-color: @headerbar_bg_color;
+  --headerbar-fg-color: @headerbar_fg_color;
+  --headerbar-border-color: @headerbar_border_color;
+  --headerbar-backdrop-color: @headerbar_backdrop_color;
+  --headerbar-shade-color: @headerbar_shade_color;
+  --headerbar-darker-shade-color: @headerbar_darker_shade_color;
+
+  --sidebar-bg-color: @sidebar_bg_color;
+  --sidebar-fg-color: @sidebar_fg_color;
+  --sidebar-backdrop-color: @sidebar_backdrop_color;
+  --sidebar-border-color: @sidebar_border_color;
+  --sidebar-shade-color: @sidebar_shade_color;
+
+  --secondary-sidebar-bg-color: @secondary_sidebar_bg_color;
+  --secondary-sidebar-fg-color: @secondary_sidebar_fg_color;
+  --secondary-sidebar-backdrop-color: @secondary_sidebar_backdrop_color;
+  --secondary-sidebar-border-color: @secondary_sidebar_border_color;
+  --secondary-sidebar-shade-color: @secondary_sidebar_shade_color;
+
+  --card-bg-color: @card_bg_color;
+  --card-fg-color: @card_fg_color;
+  --card-shade-color: @card_shade_color;
+
+  --dialog-bg-color: @dialog_bg_color;
+  --dialog-fg-color: @dialog_fg_color;
+
+  --popover-bg-color: @popover_bg_color;
+  --popover-fg-color: @popover_fg_color;
+  --popover-shade-color: @popover_shade_color;
+
+  --thumbnail-bg-color: @thumbnail_bg_color;
+  --thumbnail-fg-color: @thumbnail_fg_color;
+
+  --shade-color: @shade_color;
+  --scrollbar-outline-color: @scrollbar_outline_color;
+
+  --active-toggle-bg-color: #3B3A46;
+  --active-toggle-fg-color: #ffffff;
+
+  --overview-bg-color: #1D1C23;
+  --overview-fg-color: rgba(255,255,255,0.92);
+
+  --border-color: color-mix(in srgb, currentColor 15%, transparent);
+  --border-opacity: 15%;
+  --dim-opacity: 55%;
+  --disabled-opacity: 50%;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --border-opacity: 50%;
+    --dim-opacity: 90%;
+    --disabled-opacity: 40%;
+  }
+}
+
+/* Tooltip */
+tooltip,
+tooltip.background {
+  background-color: #2B2A33;
+  color: rgba(255,255,255,0.92);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+tooltip label {
+  color: rgba(255,255,255,0.92);
+}

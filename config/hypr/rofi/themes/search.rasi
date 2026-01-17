@@ -1,0 +1,17 @@
+@import "../config.rasi"
+
+window {
+    width: 550px;
+}
+
+element-icon {
+    size: 0px;
+}
+
+entry {
+    placeholder: "   Files";
+}
+
+listview {
+    lines: 15;
+}

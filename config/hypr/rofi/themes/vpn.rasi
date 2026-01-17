@@ -1,0 +1,23 @@
+@import "../config.rasi"
+
+configuration {
+    show-icons: false;
+}
+
+window {
+    width: 250px;
+}
+
+mainbox {
+    children: [ listview, message ];
+    spacing: 10px;
+}
+
+listview {
+    fixed-height: false;
+}
+
+message {
+    padding: 8px 0 0 10px;
+    border: 0;
+}
