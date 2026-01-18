@@ -86,11 +86,11 @@
     --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0.35);
     --firefoxcss-toolbar-button-active-box-shadow: rgba(0, 0, 0, 0.5);
 
-    --firefoxcss-new-tab-button-active: #2F2E38;
-    --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.6);
+    --firefoxcss-new-tab-button-active: #2B2A33;
+    --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.0);
 
     --firefoxcss-new-tab-button-hover: rgba(255, 255, 255, 0.1);
-    --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0.55);
+    --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0.0);
 
     /* Search Bar */
     --firefoxcss-url-dark-border: #1D1C23;
@@ -110,13 +110,13 @@
 
     --firefoxcss-url-breakout-box-shadow:
       rgba(0, 0, 0, 0.3) 0px 2px 4px,
-      rgba(0, 0, 0, 0.45) 0px 10px 20px;
+      rgba(0, 0, 0, 0.45) 0px 5px 10px;
 
     --firefoxcss-url-clipboard-button: rgba(255, 255, 255, 0.1);
 
     /* Other colors */
     --firefoxcss-urlbar-zoom-button: rgba(255, 255, 255, 0.35);
-    --firefoxcss-top-bar-border-bottom-color: rgba(0, 0, 0, 0.45);
+    --firefoxcss-top-bar-border-bottom-color: rgba(0, 0, 0, 0.0);
 
     --firefoxcss-private-browsing-menu-color: #C29EFF;
     --firefoxcss-private-browsing-drop-shadow: drop-shadow(0 0 2px #000);
