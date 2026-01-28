@@ -1,0 +1,29 @@
+@import "../config.rasi"
+
+window {width: 550px;}
+
+inputbar {children:["prompt","entry","num-rows"];}
+
+prompt {
+	margin: 6px 0px 6px 6px;
+    padding: 2px 10px;
+}
+
+entry {
+	margin: 6px 4px 6px 4px;
+    padding: 2px;
+}
+
+num-rows {
+	margin: 6px 6px 6px 0px;
+    padding: 2px 10px;
+}
+
+listview {
+	lines: 15;
+	margin: 0px 6px 6px;
+}
+
+element {padding: 4px 8px;}
+
+configuration {kb-accept-entry: "Return";}

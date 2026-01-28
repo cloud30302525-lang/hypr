@@ -1,0 +1,42 @@
+/* Window */
+@define-color window_bg_color #232634; /* Crust */
+@define-color window_fg_color #c6d0f5; /* Text */
+/* Cards */
+@define-color card_bg_color #303446; /* Base */
+@define-color card_fg_color @window_fg_color;
+/* Sidebar */
+@define-color sidebar_bg_color @card_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color sidebar_border_color #414559; /* Surface 0 */
+/* Accent */
+@define-color accent_bg_color #626880; /* Surface 2 */
+@define-color accent_fg_color @window_fg_color;
+/* Headerbar */
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @window_fg_color;
+/* Popovers */
+@define-color popover_bg_color @card_bg_color;
+@define-color popover_fg_color @window_fg_color;
+/* View */
+@define-color view_bg_color @window_bg_color;
+@define-color view_fg_color @window_fg_color;
+/* Dialogs */
+@define-color dialog_bg_color @card_bg_color;
+@define-color dialog_fg_color @window_fg_color;
+/* Tooltip */
+tooltip {
+  background-color: @popover_bg_color;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid rgba(198,208,245,0.18); /* Text */
+}
+tooltip label {color: @popover_fg_color;}
+/* Root */
+:root {
+  --accent-bg-color: @accent_bg_color;
+  --accent-fg-color: @accent_fg_color;
+  --active-toggle-bg-color: @accent_bg_color;
+  --active-toggle-fg-color: @accent_fg_color;
+}

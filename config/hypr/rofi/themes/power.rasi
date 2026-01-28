@@ -1,0 +1,12 @@
+@import "../config.rasi"
+
+window {width: 200px;}
+
+mainbox {
+	children: [listview];
+	margin: 6px;
+}
+
+listview {lines: 4;}
+
+element {padding: 6px 47px;}

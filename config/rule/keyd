@@ -1,0 +1,11 @@
+[ids]
+*
+
+[main]
+capslock = overload(f13, f13)
+
+[f13]
+w = up
+a = left
+s = down
+d = right

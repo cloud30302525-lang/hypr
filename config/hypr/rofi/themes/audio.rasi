@@ -1,0 +1,21 @@
+@import "../config.rasi"
+
+window {width: 320px;}
+
+mainbox {
+    children: [message, listview];
+    spacing: 24px;
+    margin: 12px;
+}
+
+listview {
+    lines: 1;
+    columns: 3;
+}
+
+element {padding: 10px 43px;}
+
+configuration {
+	kb-move-char-back: "Left";
+	kb-move-char-forward: "Right";
+}

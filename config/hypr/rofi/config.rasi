@@ -1,0 +1,55 @@
+configuration {
+    font: "Noto Sans 12";
+    kb-accept-entry: "Return,space";
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+}
+
+* {
+    bg: rgba(35,38,52,0.7);
+    bg2: rgba(65,69,89,0.7);
+    bd: rgba(81,87,109,0.5);
+    fg: rgb(165,173,206);
+    fg2: rgb(140,170,238);
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border-radius: 8px;
+    border: 2px;
+    border-color: @bd;
+}
+
+prompt {
+	text-color: @fg2;
+    border: 0px;
+    border-color: @bd;
+    border-radius: 8px;
+}
+
+entry {
+    horizontal-align: 0;
+    border: 0px;
+    border-color: @bd;
+    border-radius: 8px;
+}
+
+num-rows {
+    border: 0px;
+    border-color: @bd;
+    border-radius: 8px;
+}
+
+element selected {
+	background-color: @bd;
+    border: 1px;
+    border-color: rgba(140,170,238,0.4);
+    border-radius: 8px;
+}
+
+element-text selected {
+    text-color: @fg2;
+}
