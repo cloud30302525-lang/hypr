@@ -1,0 +1,59 @@
+configuration {
+    font: "Noto Sans 12";
+    kb-accept-entry: "Return,space";
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+	modi: "drun";
+    display-drun:" Apps";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    bg: rgba(35,38,52,0.7);
+    bd: rgba(81,87,109,0.5);
+    fg: rgb(165,173,206);
+    fg2: rgb(140,170,238);
+    fg3: rgb(231,130,132);
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-radius: 8px;
+    border-color: @bd;
+    width: 300px;
+}
+
+inputbar {
+	children:["prompt","entry","num-rows"];
+	margin:6px 10px;
+	spacing: 10px;
+}
+
+prompt {text-color: @fg2;}
+
+listview {
+	lines: 10;
+	margin: 0px 6px 6px;
+}
+
+element {padding: 3px 8px;}
+
+element-icon {
+	size: 24px;
+	margin: 0 6px 0 0;
+}
+
+element selected {
+	background-color: @bd;
+    border: 1px;
+    border-radius: 8px;
+    border-color: rgba(140,170,238,0.4);
+}
+
+element-text selected {text-color: @fg2;}
+
+element-text {highlight: @fg3;}
