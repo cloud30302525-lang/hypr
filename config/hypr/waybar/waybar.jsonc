@@ -16,6 +16,7 @@
 "modules-right": [
 	"tray",
 	"pulseaudio",
+	"custom/swaync",
 	"hyprland/language",
 	"clock"
 ],
@@ -74,5 +75,13 @@
 	"format-alt": "󰸗  {:L%a %d-%b}",
 	"tooltip": false,
 	"tooltip-format": "<tt>{calendar}</tt>"
+},
+
+"custom/swaync": {
+	"exec": "swaync-client -swb",
+	"format": "󰂚  {}",
+	"return-type": "json",
+	"tooltip": false,
+	"on-click": "swaync-client -t -sw"
 }
 }

@@ -48,7 +48,7 @@ need hyprctl
 if [ "$INSTALL_PKGS" -eq 1 ]; then
   ok "Packages"
   paru -S --needed --noconfirm \
-    waybar rofi wl-clip-persist cliphist mako hyprpolkitagent hyprlock \
+    waybar rofi wl-clip-persist cliphist swaync hyprpolkitagent hyprlock \
     qt6ct qt5ct nwg-look adw-gtk-theme papirus-icon-theme sddm-silent-theme-git \
     swaybg waypaper capitaine-cursors ttf-jetbrains-mono-nerd noto-fonts \
     slurp grim hyprpicker thunar engrampa thunar-archive-plugin \
