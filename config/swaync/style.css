@@ -1,9 +1,9 @@
-@define-color bg rgba(35,38,52,0.7);
-@define-color bg2 rgba(186,187,241,0.15);
-@define-color bg3 rgba(41,44,60,0.8);
-@define-color bd rgba(186,187,241,0.3);
-@define-color text rgba(198,208,245,0.85);
-@define-color dd rgba(198,208,245,0.35);
+@define-color bg   rgba(35, 38, 52, 0.7);
+@define-color bg2  rgba(186, 187, 241, 0.15);
+@define-color bg3  rgba(41, 44, 60, 0.7);
+@define-color bd   rgba(186, 187, 241, 0.3);
+@define-color text rgba(198, 208, 245, 0.85);
+@define-color dd   rgba(198, 208, 245, 0.35);
 
 * {
     color: @text;
@@ -21,7 +21,7 @@
 
 /* ==== DND ==== */
 .widget-dnd {
-    margin: 6px 6px 0 6px;
+    margin: -50px 265px 0 6px;
 }
 
 .widget-dnd > switch {
@@ -41,8 +41,16 @@
     box-shadow: 0 1px 2px 0 @bd, 1px 1px 1px @bd;
 }
 
+.widget-mpris-subtitle {
+    font-size: 12px;
+}
+
 .widget-mpris button {
     outline: none;
+    min-width: 0;
+    min-height: 0;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 .widget-mpris button:hover {
@@ -52,7 +60,7 @@
 
 /* ==== TITLE ==== */
 .widget-title {
-    margin: 0 6px;
+    margin: 6px 6px 0 110px;
 }
 
 .widget-title button {

@@ -26,17 +26,19 @@
   "hide-on-action": true,
   "script-fail-notify": true,
   "scripts": {},
+  
+  "notification-grouping": false,
 
   "widgets": [
-    "dnd",
     "mpris",
     "title",
+    "dnd",
     "notifications"
   ],
 
   "widget-config": {
     "dnd": {
-      "text": "Не беспокоить"
+      "text": "󰂛"
     },
     "title": {
       "text": "Уведомления",
