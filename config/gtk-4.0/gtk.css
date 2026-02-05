@@ -1,0 +1,47 @@
+@import "../hypr/colors/colors.css";
+
+@define-color window_bg_color @bg;
+@define-color window_fg_color @b-text;
+@define-color card_bg_color @bg3;
+@define-color card_fg_color @window_fg_color;
+@define-color sidebar_bg_color @card_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color sidebar_border_color @bd;
+@define-color accent_bg_color @bd;
+@define-color accent_fg_color @window_fg_color;
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @window_fg_color;
+@define-color popover_bg_color @card_bg_color;
+@define-color popover_fg_color @window_fg_color;
+@define-color view_bg_color @window_bg_color;
+@define-color view_fg_color @window_fg_color;
+@define-color dialog_bg_color @card_bg_color;
+@define-color dialog_fg_color @window_fg_color;
+
+tooltip {
+	background-color: @popover_bg_color;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 8px;
+	border: 1px solid @bd;
+}
+tooltip label {color: @popover_fg_color;}
+
+:root {
+	--accent-bg-color: @accent_bg_color;
+	--accent-fg-color: @accent_fg_color;
+	--active-toggle-bg-color: @accent_bg_color;
+	--active-toggle-fg-color: @accent_fg_color;
+}
+
+notebook header tabs tab {
+	margin: 0 2px;
+	outline: none;
+	border-radius: 0;
+}
+notebook header tabs tab:hover,
+notebook header tabs tab:checked {
+    box-shadow: inset 0 -4px 0 0 @bd;
+    background: @bg;
+}
