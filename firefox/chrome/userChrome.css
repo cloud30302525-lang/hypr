@@ -50,114 +50,120 @@
 ================= D A R K   T H E M E   C O L O R S ===================
 =====================================================================*/
 
+@import url("colors.css");
+
 @media (prefers-color-scheme: dark) {
   :root {
     /* Main dark color, url bar, active tab etc. */
-    --firefoxcss-main-bg-color: #23222A;
+    --firefoxcss-main-bg-color: var(--bg3);
 
-    /* Main color, toolbar background */
-    --firefoxcss-item-bg-color: #2B2A33;
+    /* Main lighter color, toolbar background */
+    --firefoxcss-item-bg-color: var(--bg2);
 
     /* Tab colors */
-    --firefoxcss-tab-bg-color: #33323D;
-    --firefoxcss-tab-hover-bg-color: #3B3A46;
-    --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-non-active-tabs: rgba(255, 255, 255, 0.65);
+    --firefoxcss-tab-bg-color: var(--button);
+    --firefoxcss-tab-hover-bg-color: var(--bd);
+    --firefoxcss-tab-active-bg-color: var(--bd);
+    --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
 
-    --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.45);
+    --firefoxcss-normal-tabs-box-shadow: inset 0 1px 2px 0px var(--bd), inset 1px 1px 1px var(--bd);
     --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
 
     /* Tab playing audio speaker icon colors */
-    --firefoxcss-tab-speaker-color: rgba(230, 230, 230, 0.85);
-    --firefoxcss-tab-speaker-icon-color: #ffffff;
-    --firefoxcss-tab-speaker-icon-hover-color: #111;
-    --firefoxcss-tab-speaker-icon-small-background: rgba(230, 230, 230, 0.9);
+    --firefoxcss-tab-speaker-color: hsla(0, 0%, 80%);
+    --firefoxcss-tab-speaker-icon-color: hsl(0, 0%, 100%);
+    --firefoxcss-tab-speaker-icon-hover-color: hsl(0, 0%, 10%);
+    --firefoxcss-tab-speaker-icon-small-background: hsla(0, 0%, 80%);
 
     /* Context menu colors */
-    --firefoxcss-context-menu-top-color: rgba(35, 34, 42, 0.96);
-
+    --firefoxcss-context-menu-top-color: var(--bg3);
     /* Bookmarks bar colors */
-    --firefoxcss-bookmarks-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 13%);
 
     /* Change background color when loading a page */
     --firefoxcss-bright-flash-color: var(--firefoxcss-main-bg-color);
 
     /* Toolbar buttons */
-    --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0.35);
-    --firefoxcss-toolbar-button-active-box-shadow: rgba(0, 0, 0, 0.5);
+    --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0.3);
+    --firefoxcss-toolbar-button-active-box-shadow: rgba(0, 0, 0, 0.3);
 
-    --firefoxcss-new-tab-button-active: #2B2A33;
+    --firefoxcss-new-tab-button-active: var(--firefoxcss-main-bg-color);
     --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.0);
 
-    --firefoxcss-new-tab-button-hover: rgba(255, 255, 255, 0.1);
+    --firefoxcss-new-tab-button-hover: var(--bd);
     --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0.0);
 
-    /* Search Bar */
-    --firefoxcss-url-dark-border: #1D1C23;
-    --firefoxcss-url-breakout-border-bottom-color: 1px solid rgba(255, 255, 255, 0.08);
+    /* Search Bar and breakout (when in focus) colors */
+    --firefoxcss-url-dark-border: color-mix(
+      in srgb,
+      var(--firefoxcss-main-bg-color) 35%,
+      black
+    );
+    --firefoxcss-url-breakout-border-bottom-color: 1px solid
+      color-mix(in srgb, var(--firefoxcss-url-dark-border) 25%, transparent);
+
     --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
-
     --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-url-border-bottom-color: 1px solid rgba(255, 255, 255, 0.18);
-    --firefoxcss-url-border-top-color: 1px solid rgba(0, 0, 0, 0.4);
+    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.2);
+    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.15);
     --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-main-bg-color);
-
-    --firefoxcss-url-box-shadow-color:
-      0 1px 0 rgba(255, 255, 255, 0.08),
-      inset 0 1px 2px rgba(0, 0, 0, 0.4) !important;
-
-    --firefoxcss-url-autocomplete-highlight: #33323D;
-
-    --firefoxcss-url-breakout-box-shadow:
-      rgba(0, 0, 0, 0.3) 0px 2px 4px,
-      rgba(0, 0, 0, 0.45) 0px 5px 10px;
-
-    --firefoxcss-url-clipboard-button: rgba(255, 255, 255, 0.1);
+    --firefoxcss-url-box-shadow-color: 0px 1px 0 0px hsla(0, 0%, 100%, 0.1),
+      inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
+    --firefoxcss-url-autocomplete-highlight: hsl(240, 2%, 26%);
+    --firefoxcss-url-breakout-box-shadow: inset 0 -1px 2px 0px var(--bd), inset -1px -1px 1px var(--bd);
+    --firefoxcss-url-clipboard-button: color-mix(
+      in srgb,
+      currentColor 10%,
+      transparent
+    );
 
     /* Other colors */
-    --firefoxcss-urlbar-zoom-button: rgba(255, 255, 255, 0.35);
-    --firefoxcss-top-bar-border-bottom-color: rgba(0, 0, 0, 0.0);
-
-    --firefoxcss-private-browsing-menu-color: #C29EFF;
-    --firefoxcss-private-browsing-drop-shadow: drop-shadow(0 0 2px #000);
-
+    --firefoxcss-urlbar-zoom-button: hsla(0, 0%, 60%, 0.35);
+    --firefoxcss-top-bar-border-bottom-color: var(--bg3);
+    --firefoxcss-private-browsing-menu-color: hsl(277, 70%, 64%);
+    --firefoxcss-private-browsing-drop-shadow: drop-shadow(
+      0px 0px 1px #000000d5
+    );
     --firefoxcss-statuspanel-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-contextmenu-hover-text: #ffffff;
+    --firefoxcss-contextmenu-hover-text: white;
+    --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 100%, 0.25);
+    --firefoxcss-customize-view-flex-space: #d0ba9e;
+    --firefoxcss-customize-view-overflow-menu: hsl(240, 2%, 10%);
 
-    --firefoxcss-customize-view-dashed-outline: rgba(255, 255, 255, 0.25);
-    --firefoxcss-customize-view-flex-space: #cbb79a;
-    --firefoxcss-customize-view-overflow-menu: #1D1C23;
-
-    /* Firefox global */
-    --panel-item-hover-bgcolor: rgba(255, 255, 255, 0.14) !important;
+    /* ============== Firefox Global colors change ==================== */
+    /* Hamburger menu button hover color */
+    --panel-item-hover-bgcolor: var(--bd) !important;
     --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
     --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
-
-    --toolbarbutton-hover-background: rgba(255, 255, 255, 0.14) !important;
-    --toolbarbutton-active-background: rgba(255, 255, 255, 0.2) !important;
-
-    --button-hover-bgcolor: rgba(255, 255, 255, 0.14) !important;
-    --button-active-bgcolor: rgba(255, 255, 255, 0.2) !important;
-    --button-bgcolor: rgba(255, 255, 255, 0.1) !important;
-
-    --arrowpanel-border-color: rgba(255, 255, 255, 0.14) !important;
-
-    --dark-menu-background-color: #26252E !important;
-    --dark-menu-border-color: #3B3A46 !important;
-    --dark-menuitem-hover-background-color: rgba(255, 255, 255, 0.14) !important;
-
+    --toolbarbutton-hover-background: var(--bd) !important;
+    --toolbarbutton-active-background: var(--bd) !important;
+    --button-hover-bgcolor: var(--bd) !important;
+    --button-active-bgcolor: var(--bd) !important;
+    --button-bgcolor: hsla(0, 0%, 45%, 0.9) !important;
+    --arrowpanel-border-color: hsla(0, 0%, 50%, 0.25) !important;
+    --dark-menu-background-color: #222121 !important;
+    --dark-menu-border-color: rgb(55, 55, 55) !important;
+    --dark-menu-background-color: #222121 !important;
+    --dark-menu-border-color: rgb(55, 55, 55) !important;
+    --dark-menuitem-hover-background-color: rgba(
+      159,
+      159,
+      159,
+      0.35
+    ) !important;
     --panel-separator-color: var(--arrowpanel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
-
     --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
-
-    --urlbarView-highlight-background: #33323D !important;
-    --urlbarView-hover-background: rgba(255, 255, 255, 0.1) !important;
-
+    --urlbarView-highlight-background: var(--button) !important;
+    --urlbarView-hover-background: color-mix(
+      in srgb,
+      currentColor 8%,
+      transparent
+    ) !important;
+    /* Color for add bookmarks menu when adding through tabs */
     --in-content-page-background: var(--arrowpanel-background) !important;
-
-    --firefoxcss-context-menu-item-bg-color: rgba(255, 255, 255, 0.14);
-    --firefoxcss-context-menu-item-bg-color-inactive: rgba(255, 255, 255, 0.08);
+    --firefoxcss-context-menu-item-bg-color: var(--bd);
+    --firefoxcss-context-menu-item-bg-color-inactive: hsla(0, 0%, 60%, 0.15);
   }
 }
 
@@ -716,7 +722,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-active-bg-color) !important;
-  box-shadow: none !important;
+  box-shadow: inset 0 1px 2px 0px var(--bd), inset 1px 1px 1px var(--bd) !important;
   outline: none !important;
 }
 
@@ -1855,12 +1861,7 @@ toolbar
 
 /* Status URL change (bottom left when hovering a link)  */
 #statuspanel-label {
-  background-color: transparent !important;
-  border-radius: 4px !important;
-  border-color: transparent !important;
-  color: transparent !important;
-  margin: 0 0 3px 3px !important;
-  padding: 4px !important;
+  display: none !important;
 }
 
 /* Make forward and back buttons smaller  */
@@ -2133,16 +2134,16 @@ toolbar
 
       & .titlebar-max,
       & .titlebar-restore {
-		display: none !important;
+        order: 2 !important;
         @media (-moz-platform: macos) {
-			display: none !important;
+          order: 1 !important;
         }
       }
 
       & .titlebar-close {
-		display: none !important;
+        display: none !important;
         @media (-moz-platform: macos) {
-			display: none !important;
+          order: 3 !important;
         }
       }
     }
@@ -2229,12 +2230,12 @@ toolbar
     #urlbar-searchmode-switcher:hover & {
       fill: color-mix(in srgb, currentColor 90%, transparent) !important;
     }
-  }
+}
 
-tooltip {
-  background-color: #2B2A33 !important; /* основной цвет */
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  border-radius: 8px !important;
-  padding: 6px 10px !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+browser[type="content"] {
+	background-color: var(--bg2) !important;
+}
+
+.subviewbutton:hover {
+    background-color: var(--bd) !important;
 }

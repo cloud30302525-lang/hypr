@@ -26,7 +26,7 @@ box-shadow:inset 0 1px 2px 0px @bd, inset 1px 1px 1px @bd}
 #custom-swaync.notification{color:@text-lt}
 
 /* tooltip & menu */
-tooltip{background:@bg-waybar;border-radius:8px;box-shadow:inset 0 0 0 1px @bd2}
+tooltip,
+menu{background:@bg-waybar;border-radius:8px;box-shadow:inset 0 1px 2px 0px @bd, inset 1px 1px 1px @bd}
 tooltip label{color:@text}
-menu{background:@bg-waybar;box-shadow:inset 0 0 0 1px @bd2}
 menu menuitem{padding:0}

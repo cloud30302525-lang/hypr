@@ -11,6 +11,7 @@ QT6_FILE="$CONF_DIR/qt6ct/colors/theme.conf"
 WAYBAR_DIR="$CONF_DIR/hypr/waybar"
 POLKIT_BIN="/usr/lib/hyprpolkitagent/hyprpolkitagent"
 POLKIT_NAME=$(basename "$POLKIT_BIN")
+FIREFOX_FILE="$CONF_DIR/firefox/chrome/colors.css"
 
 [[ ! -f "$CSS_FILE" ]] && exit 1
 
@@ -80,6 +81,16 @@ disabled="#$ARGB_DIS, #$ARGB_HL, #$ARGB_BG, #$ARGB_BG, #$ARGB_BG, #$ARGB_BG, #$A
 for qt_conf in "$QT5_FILE" "$QT6_FILE"; do
     [[ -f "$qt_conf" ]] && sed -i "s|^active_colors=.*|active_colors=$active|; s|^inactive_colors=.*|inactive_colors=$active|; s|^disabled_colors=.*|disabled_colors=$disabled|" "$qt_conf"
 done
+
+## --- Обновление Firefox ---
+if [[ -f "$FIREFOX_FILE" ]]; then
+    sed -i -E "
+        s/--bg2:[[:space:]]*rgb\([^)]+\)/--bg2: rgb($rgb_bg)/;
+        s/--bg3:[[:space:]]*rgb\([^)]+\)/--bg3: rgb($rgb_bg3)/;
+        s/--bd:[[:space:]]*rgba\([^)]+\)/--bd: rgba($rgb_border, ${alpha_bd:-0.3})/;
+        s/--button:[[:space:]]*rgba\([^)]+\)/--button: rgba($rgb_text_main, 0.1)/;
+    " "$FIREFOX_FILE"
+fi
 
 ## --- Перезапуск сервисов и Polkit ---
 (

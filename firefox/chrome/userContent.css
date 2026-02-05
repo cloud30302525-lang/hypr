@@ -4,10 +4,14 @@
 @import url("wallpaper-edition.css");
 @import url("remove_homepage_shortcut_title_text.css");
 @import url("circular_homepage_shortcuts.css");
+@import url("colors.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
 =====================================================================*/
+
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing"),
+               url-prefix("about:"), url("about:blank"), url-prefix(about:firefoxview) {
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -146,6 +150,8 @@
 body {
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
 }
+                 
+}
 
 @-moz-document url("about:privatebrowsing") {
   body {
@@ -237,8 +243,9 @@ window for this specific moz preference. */
 @-moz-document url("about:home"),
 url("about:newtab") {
   body {
-    --newtab-background-color: var(--firefoxcss-main-bg-color) !important;
+    background-color: var(--bg2) !important;
     background-size: cover !important;
+    background-image: none !important;
   }
 
 /*   Disable phone button in new tab */
