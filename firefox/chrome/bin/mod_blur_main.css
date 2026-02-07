@@ -13,7 +13,7 @@
     /* Tab colors */
     --firefoxcss-tab-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-tab-hover-bg-color: rgba(var(--dtui-theme-border), 0.2);
-    --firefoxcss-tab-active-bg-color: rgba(var(--dtui-theme-border), 0.2);
+    --firefoxcss-tab-active-bg-color: rgba(var(--dtui-theme-border), 0.5);
     --firefoxcss-non-active-tabs: rgb(var(--dtui-theme-text-color));
 
     --firefoxcss-normal-tabs-box-shadow: inset 0 1px 2px 0px rgba(var(--dtui-theme-border), 0.3),
@@ -115,106 +115,6 @@
     --in-content-page-background: var(--arrowpanel-background) !important;
     --firefoxcss-context-menu-item-bg-color: hsla(0, 0%, 60%, 0.3);
     --firefoxcss-context-menu-item-bg-color-inactive: hsla(0, 0%, 60%, 0.15);
-  }
-}
-
-/*=====================================================================
-================= L I G H T   T H E M E   C O L O R S =================
-=====================================================================*/
-
-@media (prefers-color-scheme: light) {
-  :root {
-    /* Main dark color, url bar, active tab etc. */
-    --firefoxcss-main-bg-color: hsl(200, 5%, 98%);
-
-    /* Main lighter color, toolbar background */
-    --firefoxcss-item-bg-color: hsl(200, 5%, 96%);
-
-    /* Tab colors hsl(240, 15%, 90%) */
-    --firefoxcss-tab-bg-color: hsl(200, 5%, 92%);
-    --firefoxcss-tab-hover-bg-color: hsl(200, 5%, 86%);
-    --firefoxcss-tab-active-bg-color: hsl(200, 5%, 85%);
-    --firefoxcss-non-active-tabs: hsl(0, 0%, 25%);
-
-    --firefoxcss-normal-tabs-box-shadow: none;
-    --firefoxcss-tab-multiselect-outline: hsl(240, 8%, 75%);
-
-    /* Tab playing audio speaker icon colors */
-    --firefoxcss-tab-speaker-color: hsl(0, 0%, 20%);
-    --firefoxcss-tab-speaker-icon-color: hsl(0, 0%, 10%);
-    --firefoxcss-tab-speaker-icon-hover-color: white;
-    --firefoxcss-tab-speaker-icon-small-background: hsl(0, 0%, 20%);
-
-    /* Context menu colors */
-    --firefoxcss-context-menu-top-color: hsl(240, 15%, 95%);
-
-    /* Bookmarks bar colors */
-    --firefoxcss-bookmarks-bg-color: var(--firefoxcss-item-bg-color);
-
-    /* Change background color when loading a page */
-    --firefoxcss-bright-flash-color: var(--firefoxcss-main-bg-color);
-
-    /* Toolbar buttons */
-    --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0);
-    --firefoxcss-toolbar-button-active-box-shadow: rgba(0, 0, 0, 0);
-
-    --firefoxcss-new-tab-button-active: hsl(200, 10%, 90%);
-    --firefoxcss-new-tab-button-box-shadow-active: rgba(0, 0, 0, 0.4);
-
-    --firefoxcss-new-tab-button-hover: hsla(200, 5%, 83%, 0.65);
-    --firefoxcss-new-tab-button-box-shadow-hover: rgba(0, 0, 0, 0);
-
-    /* Search Bar and breakout (when in focus) colors */
-    --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
-    --firefoxcss-url-bar-bg-color: hsl(200, 5%, 92%);
-    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 1);
-    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0);
-    --firefoxcss-url-breakout-bar-bg-color: hsl(200, 5%, 98%);
-    --firefoxcss-url-breakout-border-bottom-color: hsla(0, 0%, 70%, 0.05);
-    --firefoxcss-url-box-shadow-color: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
-    --firefoxcss-url-autocomplete-highlight: hsl(200, 5%, 90%);
-    --firefoxcss-url-breakout-box-shadow: transparent 0 0 0 3px,
-      rgba(18, 18, 18, 0.1) 2px 10px 22px;
-    --firefoxcss-url-clipboard-button: color-mix(
-      in srgb,
-      currentColor 10%,
-      transparent
-    );
-
-    /* Other colors */
-    --firefoxcss-urlbar-zoom-button: hsla(200, 5%, 60%, 0.35);
-    --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 0%, 0.1);
-    --firefoxcss-private-browsing-menu-color: hsl(277, 80%, 55%);
-    --firefoxcss-private-browsing-drop-shadow: none;
-    --firefoxcss-statuspanel-bg-color: hsl(200, 10%, 98%);
-    --firefoxcss-contextmenu-hover-text: black;
-    --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 0%, 0.2);
-    --firefoxcss-customize-view-flex-space: hsl(34, 50%, 70%);
-    --firefoxcss-customize-view-overflow-menu: hsl(200, 5%, 100%);
-
-    /* ============== Firefox Global colors change ==================== */
-    --panel-item-hover-bgcolor: hsla(240, 5%, 70%, 0.35) !important;
-    --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
-    --toolbarbutton-hover-background: hsla(200, 5%, 70%, 0.35) !important;
-    --toolbarbutton-active-background: hsla(200, 5%, 50%, 0.35) !important;
-    --arrowpanel-background: hsl(200, 10%, 96%) !important;
-    --button-hover-bgcolor: hsla(200, 5%, 70%, 0.35) !important;
-    --button-active-bgcolor: hsla(200, 5%, 50%, 0.35) !important;
-    --button-bgcolor: hsla(0, 0%, 45%, 0.1) !important;
-    /* Search Bar */
-    --arrowpanel-border-color: hsla(0, 0%, 100%, 0.5) !important;
-    --panel-separator-color: hsla(0, 0%, 20%, 0.15) !important;
-    --panel-separator-zap-gradient: var(--panel-separator-color) !important;
-    --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
-    --urlbarView-hover-background: color-mix(
-      in srgb,
-      currentColor 8%,
-      transparent
-    ) !important;
-    /* Color for add bookmarks menu when adding through tabs */
-    --in-content-page-background: var(--arrowpanel-background) !important;
-    --firefoxcss-context-menu-item-bg-color: hsla(240, 2%, 70%, 0.35);
-    --firefoxcss-context-menu-item-bg-color-inactive: hsla(240, 2%, 70%, 0.15);
   }
 }
 
@@ -2182,4 +2082,7 @@ toolbar
       fill: color-mix(in srgb, currentColor 90%, transparent) !important;
     }
   }
+
+tooltip {
+	border: 1px solid rgba(var(--dtui-theme-border), 0.3) !important;
 }
