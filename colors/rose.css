@@ -6,6 +6,8 @@
 @define-color text-lt       rgb(156, 175, 235);
 @define-color text-lt2      rgb(235, 111, 146);
 
+@define-color accent		rgb(97, 96, 121);
+
 @define-color bg-swaync		alpha(@bg, 0.7);
 @define-color bg2-swaync	alpha(@bg2, 0.7);
 

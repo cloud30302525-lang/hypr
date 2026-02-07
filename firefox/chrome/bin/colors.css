@@ -1,0 +1,8 @@
+* {
+  --dtui-theme-main-color: 35, 38, 52;		/* Crust */
+  --dtui-theme-secondary-color: 48, 52, 70;	/* Base */
+  --dtui-theme-accent-color: 81, 87, 109;	/* Surface 1 */
+  --dtui-theme-text-color: 198, 208, 245;	/* Text */
+  --dtui-theme-accent-link: 140, 170, 238;	/* Blue */
+  --dtui-theme-border: 186, 187, 241;		/* Lavender */
+}

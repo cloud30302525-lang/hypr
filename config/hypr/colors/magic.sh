@@ -11,21 +11,23 @@ QT6_FILE="$CONF_DIR/qt6ct/colors/theme.conf"
 WAYBAR_DIR="$CONF_DIR/hypr/waybar"
 POLKIT_BIN="/usr/lib/hyprpolkitagent/hyprpolkitagent"
 POLKIT_NAME=$(basename "$POLKIT_BIN")
-FIREFOX_FILE="$CONF_DIR/firefox/chrome/colors.css"
+FIREFOX_FILE="$CONF_DIR/firefox/chrome/bin/colors.css"
 
 [[ ! -f "$CSS_FILE" ]] && exit 1
 
 ## --- Извлечение и парсинг цветов ---
 eval "$(sed -nE "
     s/.*bg[[:space:]]+rgb\(([^)]+)\).*/rgb_bg='\1'/p;
+    s/.*bg2[[:space:]]+rgb\(([^)]+)\).*/rgb_bg2='\1'/p;
     s/.*bg3[[:space:]]+rgb\(([^)]+)\).*/rgb_bg3='\1'/p;
     s/.*border[[:space:]]+rgb\(([^)]+)\).*/rgb_border='\1'/p;
     s/.*b-text[[:space:]]+rgb\(([^)]+)\).*/rgb_text_main='\1'/p;
+    s/.*text-lt[[:space:]]+rgb\(([^)]+)\).*/rgb_lt='\1'/p;
+    s/.*text-lt2[[:space:]]+rgb\(([^)]+)\).*/rgb_lt2='\1'/p;
+    s/.*accent[[:space:]]+rgb\(([^)]+)\).*/rgb_accent='\1'/p;
     s/.*bg-swaync[[:space:]]+alpha\(@bg,[[:space:]]*([0-9.]+)\).*/alpha_bg='\1'/p;
     s/.*bd[[:space:]]+alpha\(@border,[[:space:]]*([0-9.]+)\).*/alpha_bd='\1'/p;
     s/.*text[[:space:]]+alpha\(@b-text,[[:space:]]*([0-9.]+)\).*/alpha_text='\1'/p;
-    s/.*text-lt[[:space:]]+rgb\(([^)]+)\).*/rgb_lt='\1'/p;
-    s/.*text-lt2[[:space:]]+rgb\(([^)]+)\).*/rgb_lt2='\1'/p;
 " "$CSS_FILE")"
 
 rgb_to_hex() {
@@ -85,10 +87,12 @@ done
 ## --- Обновление Firefox ---
 if [[ -f "$FIREFOX_FILE" ]]; then
     sed -i -E "
-        s/--bg2:[[:space:]]*rgb\([^)]+\)/--bg2: rgb($rgb_bg)/;
-        s/--bg3:[[:space:]]*rgb\([^)]+\)/--bg3: rgb($rgb_bg3)/;
-        s/--bd:[[:space:]]*rgba\([^)]+\)/--bd: rgba($rgb_border, ${alpha_bd:-0.3})/;
-        s/--button:[[:space:]]*rgba\([^)]+\)/--button: rgba($rgb_text_main, 0.1)/;
+        s/(--dtui-theme-main-color:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_bg;/;
+        s/(--dtui-theme-secondary-color:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_bg3;/;
+        s/(--dtui-theme-accent-color:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_accent;/;
+        s/(--dtui-theme-text-color:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_text_main;/;
+        s/(--dtui-theme-accent-link:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_lt;/;
+        s/(--dtui-theme-border:[[:space:]]*)[0-9,[:space:]]+;/\1$rgb_border;/;
     " "$FIREFOX_FILE"
 fi
 
