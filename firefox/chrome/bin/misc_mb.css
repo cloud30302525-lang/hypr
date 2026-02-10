@@ -1,0 +1,23 @@
+/* Set background color for the Tab that has audio playing. Thanks to github@TaouMou for the idea */
+
+:root {
+    /* Change to any color you want */
+     --firefoxcss-colored-sound-tab: #5960c482 !important; 
+}
+
+#tabbrowser-tabs .tabbrowser-tab:is([soundplaying]) .tab-background:not([selected]) {
+    background-color: var(--firefoxcss-colored-sound-tab) !important;
+    transition: background-color 500ms ease !important;
+}
+
+/* Only show dots in search bar when hovered */
+#urlbar #identity-box::after,
+#urlbar #page-action-buttons::before {
+   opacity: 0;
+}
+
+#urlbar:hover #identity-box::after,
+#urlbar:hover #page-action-buttons::before {
+  opacity: 0.2;
+ transition: opacity 100ms ease;
+}

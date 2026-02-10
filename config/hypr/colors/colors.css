@@ -1,0 +1,23 @@
+@define-color bg			rgb(35, 38, 52);
+@define-color bg2			rgb(41, 44, 60);
+@define-color bg3			rgb(48, 52, 70);
+@define-color border		rgb(186, 187, 241);
+@define-color b-text		rgb(198, 208, 245);
+@define-color text-lt		rgb(140, 170, 238);
+@define-color text-lt2		rgb(231, 130, 132);
+
+@define-color accent		rgb(81, 87, 109);
+
+@define-color bg-swaync		alpha(@bg, 0.7);
+@define-color bg2-swaync	alpha(@bg2, 0.7);
+
+@define-color bg-waybar		alpha(@bg, 0.4);
+@define-color bg2-waybar	alpha(@bg2, 0.5);
+
+@define-color bd			alpha(@border, 0.3);
+@define-color bd2			alpha(@border, 0.1);
+
+@define-color button		alpha(@b-text, 0.1);
+@define-color button2		alpha(@b-text, 0.6);
+@define-color text			alpha(@b-text, 0.85);
+@define-color text-dim		alpha(@b-text, 0.35);

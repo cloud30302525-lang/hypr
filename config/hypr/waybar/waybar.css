@@ -1,0 +1,32 @@
+@import "../colors/colors.css";
+
+/* base */
+*{font-size:12px;font-weight:bold;min-height:0;outline:none;border:none;box-shadow:none}
+window#waybar{background:@bg-waybar;border-radius:12px;box-shadow:inset 0 0 0 1px @bd2}
+
+/* modules-left */
+#custom-weather,#workspaces{background:@bg2-waybar;color:@text;border-radius:10px;padding:0 6px;margin:4px 0;
+box-shadow:inset 0 1px 2px 0px @bd, inset 1px 1px 1px @bd}
+#custom-weather{padding:0 10px;margin-left:4px}
+#workspaces{margin-left:4px}
+#workspaces button{background:transparent;color:@text-dim;padding:0 3px;transition:all 0.4s ease-in-out}
+#workspaces button:not(.empty):not(.active){color:@text}
+#workspaces button.active{color:@text-lt}
+
+/* modules-center */
+#taskbar button{background:transparent}
+
+/* modules-right */
+.modules-right{background:@bg2-waybar;color:@text;border-radius:10px;margin:4px 4px 4px 0;padding-left:6px;
+box-shadow:inset 0 1px 2px 0px @bd, inset 1px 1px 1px @bd}
+#tray,#pulseaudio,#language,#clock,#custom-swaync{padding:0 3px}
+#pulseaudio{min-width:44px}
+#language{color:@text-lt;min-width:16px}
+#custom-swaync{padding-right:11px}
+#custom-swaync.notification{color:@text-lt}
+
+/* tooltip & menu */
+tooltip,
+menu{background:@bg-waybar;border-radius:8px;box-shadow:inset 0 1px 2px 0px @bd, inset 1px 1px 1px @bd}
+tooltip label{color:@text}
+menu menuitem{padding:0}

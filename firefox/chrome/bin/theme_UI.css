@@ -1,0 +1,52 @@
+* {
+  color-scheme: var(--dtui-theme-color-scheme) !important;
+  --color-accent-primary: rgb(var(--dtui-theme-accent-color)) !important;
+  --button-background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+  --button-background-color-hover: rgba(var(--dtui-theme-border), 0.3) !important;
+  --button-background-color-active: var(--button-background-color-hover) !important;
+  --toolbox-bgcolor: rgb(var(--dtui-theme-main-color)) !important;
+  --toolbox-bgcolor-inactive: rgb(var(--dtui-theme-main-color)) !important;
+  --toolbox-textcolor: rgb(var(--dtui-theme-text-color)) !important;
+  --toolbar-bgcolor: rgb(var(--dtui-theme-main-color)) !important;
+  --toolbar-color: rgb(var(--dtui-theme-text-color)) !important;
+  --toolbarbutton-icon-fill: rgb(var(--dtui-theme-text-color)) !important;
+  --toolbarbutton-hover-background: rgba(var(--dtui-theme-border), 0.3) !important;
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
+  --tabpanel-background-color: rgb(var(--dtui-theme-main-color)) !important;
+  --urlbarView-hover-background: rgba(var(--dtui-theme-border), 0.3) !important;
+  --urlbarView-highlight-background: var(--urlbarView-hover-background) !important;
+  --panel-color: rgb(var(--dtui-theme-text-color)) !important;
+  --panel-separator-color: var(--dtui-theme-separator-color) !important;
+  --sidebar-border-color: rgb(var(--dtui-theme-main-color)) !important;
+  --sidebar-box-border: var(--dtui-theme-border-width) solid var(--sidebar-box-border-color) !important;
+  --sidebar-box-border-color: var(--dtui-theme-border-color) !important;
+  --in-content-border-color: var(--dtui-theme-border-color) !important;
+  --chrome-content-separator-color: rgb(var(--dtui-theme-main-color)) !important;
+  --download-progress-fill-color: var(--dtui-theme-accent-high-contrast) !important;
+  --background-color-canvas: rgb(var(--dtui-theme-main-color)) !important;
+  --background-color-box: rgb(var(--dtui-theme-secondary-color)) !important;
+  --color-accent-primary: rgb(var(--dtui-theme-accent-color)) !important;
+  --color-accent-primary-hover: rgba(var(--dtui-theme-border), 0.3) !important;
+  --color-accent-primary-active: rgb(var(--dtui-theme-accent-color)) !important;
+  --button-text-color-primary: rgb(var(--dtui-theme-text-color)) !important;
+  --button-text-color: rgb(var(--dtui-theme-text-color)) !important;
+}
+
+.sidebar-panel, #PersonalToolbar, #password-notification, #report-broken-site-popup-mainView, fieldset #inputs,
+#moz-card-details {
+  background-color: rgb(var(--dtui-theme-main-color)) !important;
+}
+
+input {
+  background-color: rgb(var(--dtui-theme-secondary-color)) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+tooltip, .sidebar-panel, .urlbarView-row:hover .urlbarView-url {
+  color: rgb(var(--dtui-theme-text-color)) !important;
+}
+
+button#viewButton {
+  background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+}
