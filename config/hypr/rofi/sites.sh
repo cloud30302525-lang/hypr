@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+web="firefox"
+
 sites=(
-  "󰈹    Firefox|"
+  "󰈹    ${web^}|"
   "    YouTube|https://youtube.com"
   "󰎁    Rezka|https://rezka.fi/continue"
   "󰝚    Music|https://music.yandex.ru"
+  "󱨃    Deepseek|https://chat.deepseek.com"
   "󰚩    ChatGPT|https://chatgpt.com"
-  "    Arch|https://archlinux.org/packages"
   "    GitHub|https://github.com/cloud30302525-lang/hypr"
 )
 
@@ -17,14 +19,12 @@ choice=$(printf '%s\n' "${sites[@]%%|*}" | rofi -dmenu -i \
         window { width: 200px; }
         mainbox { children: [listview]; }
         listview { margin: 6px; lines: 7; }
-        element-text { margin: 1px 38px; }
-        configuration { show-icons: false; }'
+        element-text { margin: 1px 0px; }
+        configuration { show-icons: true; }'
 ) || exit 0
 
 for i in "${!sites[@]}"; do
     [[ ${sites[i]%%|*} == "$choice" ]] && url=${sites[i]#*|} && break
 done
 
-firefox --new-tab ${url:+ "$url"} &
-
-hyprctl dispatch workspace 1
+$web --new-tab ${url:+ "$url"} &
