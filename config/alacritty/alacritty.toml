@@ -1,0 +1,20 @@
+[window]
+padding = { x = 15, y = 0 }
+dynamic_padding = false
+
+[colors.primary]
+background = "#232634"
+foreground = "#c6d0f5"
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true

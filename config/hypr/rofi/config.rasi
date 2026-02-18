@@ -1,0 +1,56 @@
+configuration {
+    font: "Noto Sans 12";
+    kb-accept-entry: "Return,space";
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+	modi: "drun";
+    display-drun:" Apps";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+@theme "colors"
+
+* {
+    background-color: transparent;
+    text-color: @text;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-radius: 8px;
+    border-color: @bd;
+    width: 300px;
+}
+
+inputbar {
+	children:["prompt","entry","num-rows"];
+	margin:6px 10px;
+	spacing: 10px;
+}
+
+prompt {text-color: @text-lt;}
+
+listview {
+	lines: 10;
+	margin: 0px 6px 6px;
+}
+
+element {padding: 3px 8px;}
+
+element-icon {
+	size: 24px;
+	margin: 0 6px 0 0;
+}
+
+element selected {
+	background-color: @bg3;
+    border: 1px;
+    border-radius: 8px;
+    border-color: @bd;
+}
+
+element-text selected {text-color: @text-lt;}
+
+element-text {highlight: @text-lt2;}

@@ -1,0 +1,91 @@
+{
+"position": "bottom",
+"height": 30,
+"width": 850,
+"margin-bottom": 0,
+
+"modules-left": [
+	"custom/weather",
+	"hyprland/workspaces"
+],
+
+"modules-center": [
+	"wlr/taskbar"
+],
+
+"modules-right": [
+	"tray",
+	"pulseaudio",
+	"hyprland/language",
+	"clock",
+	"custom/swaync"
+],
+
+"custom/weather": {
+	"exec": "~/.config/hypr/waybar/weather.sh",
+	"interval": 1800,
+	"return-type": "json"
+},
+
+"hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"active": "󰮯"
+	},
+	"persistent-workspaces": {
+		"*": 5
+	},
+	"on-scroll-up": "hyprctl dispatch workspace -1",
+	"on-scroll-down": "hyprctl dispatch workspace +1"
+},
+
+"wlr/taskbar": {
+	"icon-size": 16,
+	"tooltip": true,
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close",
+	"on-scroll-up": "hyprctl dispatch workspace e-1",
+	"on-scroll-down": "hyprctl dispatch workspace e+1"
+},
+
+"tray": {
+	"icon-size": 12,
+	"spacing": 8
+},
+
+"pulseaudio": {
+	"format": "    {volume}%",
+	"format-muted": "    0%",
+	"scroll-step": 5,
+	"tooltip": false,
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	"on-click-middle": "pavucontrol"
+},
+
+"hyprland/language": {
+	"format-en": "En",
+	"format-ru": "Ru",
+	"on-click": "hyprctl switchxkblayout all next",
+	"on-click-middle": "sh -c 'cliphist wipe'"
+},
+
+"clock": {
+	"format": "   {:%H:%M}",
+	"format-alt": "󰸗  {:L%a %d-%b}",
+	"tooltip": false,
+	"tooltip-format": "<tt>{calendar}</tt>"
+},
+
+"custom/swaync": {
+    "exec": "swaync-client -swb",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+        "default": "󰂚",
+        "notification": "󱅫"
+    },
+    "tooltip": false,
+    "on-click": "swaync-client -t -sw"
+}
+}
