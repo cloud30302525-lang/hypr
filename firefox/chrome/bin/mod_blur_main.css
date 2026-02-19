@@ -614,9 +614,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* Show Tab close button on hover */
 #navigator-toolbox .tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: flex !important;
-  opacity: 0;
-  visibility: collapse !important;
+  display: none !important;
 }
 
 #navigator-toolbox .tabbrowser-tab:not([pinned]):hover .tab-close-button {
